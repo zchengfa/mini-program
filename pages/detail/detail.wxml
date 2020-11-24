@@ -1,0 +1,35 @@
+<!--pages/detail/detail.wxml-->
+<!-- 生活指数(数据来自前一个页面的传入) -->
+<view id="detail">
+  <view class="detail-container">
+    <view class="container">
+      <view class="container-h content"><text>{{detailData.name}}</text></view>
+      <view class="container-m content">
+        <view class="weather">
+          <image class="location"src="http://sc.adminbuy.cn/uploads/allimg/170119/1-1F1191341430-L.png" mode="widthFix"></image>
+          <text class="city">当前城市：{{detailData.city}}</text>
+          <text class="weatherText">当前天气：{{detailData.weather}}</text>
+          <view class="img"><image mode="widthFix" src="{{detailData.icon}}"></image></view>
+        </view>
+        <view class="life">
+          <text>时间{{detailData.time}}</text>
+          <text>等级：{{detailData.level}}级</text>
+          <text>{{detailData.category}}</text>
+        </view>
+      </view>
+      <view class="container-b content"><text class="txt">{{detailData.text}}</text></view>
+    </view>
+  </view>
+  <!-- 新闻资讯 -->
+  <view class="news-box">
+    <view class="news-container clearfix" wx:for="{{news}}" wx:key="news" wx:for-item="news">
+      <view class="news-l item">
+        <image mode="widthFix" src="{{news.image}}"></image>
+      </view>
+      <view class="news-r item">
+          <text bindtap="GoNewsDetail" data-newslink="{{news.path}}">{{news.title}}</text>
+        <view class="news-time"><text>{{news.passtime}}</text></view>
+      </view>
+    </view>
+  </view>
+</view>

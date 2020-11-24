@@ -1,0 +1,11 @@
+<!--components/life/life.wxml-->
+<view class="life">
+  <view class="life-box" wx:for="{{lifeData}}" wx:key="life">
+    <!-- 跳转时将下个页面需要的数据传入进去 -->
+    <navigator url="../../pages/detail/detail?name={{item.name}}&time={{item.date}}&level={{item.level}}&category={{item.category}}&text={{item.text}}&temp={{weatherNow.temp}}&icon={{weatherNow.icon}}&weather={{weatherNow.text}}&city={{currentCity}}">
+      <text class="content name">{{item.name}}</text>
+      <text class="content level">{{item.level}}级</text>
+      <text class="content category">{{item.category}}</text>    
+    </navigator>
+  </view>
+</view>

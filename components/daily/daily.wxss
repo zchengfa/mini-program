@@ -1,0 +1,27 @@
+/*使用hours文件样式*/
+@import "../hours/hours.wxss";
+/* .canvas-container {
+  position: fixed;
+  top: -2000rpx;
+  display: block;
+  width: 400%;
+  height: 200rpx;
+}  */
+/* .scroll-views{
+  width: 100%;
+  white-space: nowrap;
+}
+.image-container{
+  width: 2500rpx;
+  height:200rpx;
+}
+.canvas-image{
+  position: relative;
+  top:20rpx;
+  width: 100%;
+  height:100%;
+}
+.canva {
+  width: 100%;
+  height:100%;
+} */

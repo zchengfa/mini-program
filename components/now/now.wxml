@@ -1,0 +1,32 @@
+<!--components/header/header.wxml-->
+  
+  <view class="button-container">
+    <!-- 城市按钮 -->
+    <view class="button-box">
+      <button class="my-button"  bindtap="onTap">{{buttonText}}</button>
+    </view>
+    <!-- 城市列表 -->
+    <view class="button-category">
+      <view class="category-box">
+        <text class="category-item" wx:for="{{city}}" wx:key="item" wx:if="{{isShow}}" data-text="{{item.name}}" data-locationid="{{item.id}}" bindtap="getCuCity">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 实时天气 -->
+  <view class="weather-now clearfix">
+    <view>
+      <text class="temp">{{weatherNow.temp}}°</text>
+      <text class="currentCity">{{buttonText}}</text>
+    </view>
+    <image class="weather-img" src="{{weatherNow.icon}}" mode="widthFix"></image>
+    <view>
+      <text class="feelLike weather">体感温度： {{weatherNow.feelsLike}}℃</text>
+      <text class="weather-text weather">{{weatherNow.text}}</text>
+    </view>
+    <view>
+      <text class="windStrength weather">风力： {{weatherNow.windScale}}级</text>
+      <text class="humidity weather">湿度： {{weatherNow.humidity}}%</text>
+      <text class="pressure weather">压力: {{weatherNow.pressure}}hPa</text>
+    </view>
+  </view>
+  

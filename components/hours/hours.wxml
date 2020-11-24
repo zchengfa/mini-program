@@ -1,0 +1,16 @@
+<view class="content">
+  <scroll-view class="scroll" hidden="{{showScrollView}}" scroll-x="{{scrollHorizontal}}" scroll-y="{{scrollVertial}}">
+    <!-- 遍历页面传给组件的数据 -->
+    <view class="scroll-item" wx:for="{{scrollItemData}}" wx:key="itemData">
+      <text class="time item-data">{{item.fxTime}}</text>
+      <text class="temp item-data">{{item.temp}}℃</text>
+      <view class="image-box">
+        <image style="{width:40rpx}" mode="widthFix" src="{{item.icon}}"></image>
+      </view>
+      <text class="weather-text item-data">{{item.text}}</text>
+      <text class="humidity item-data">{{item.humidity}}</text>
+      <text class="windSpeed item-data">{{item.windSpeed}}</text>
+      <text class="pressure item-data">{{item.pressure}}</text>
+    </view>
+  </scroll-view>
+</view>

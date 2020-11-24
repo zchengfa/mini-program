@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "now":"../../components/now/now",
+    "hours":"../../components/hours/hours",
+    "daily":"../../components/daily/daily",
+    "life":"../../components/life/life",
+    "ec-canvas":"../../components/ec-canvas/ec-canvas"
+  }
+  
+}

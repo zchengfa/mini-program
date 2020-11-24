@@ -1,0 +1,60 @@
+/* components/header/header.wxss */
+.button-container{
+  position: fixed;
+  top:20rpx;
+  left: 20rpx;
+  z-index: 999;
+}
+.category-item{
+  display: block;
+  margin-top: 10rpx;
+  width: 120rpx;
+  color: white;
+  font-size: 22rpx;
+  text-align: center;
+  background-color: rgba(216, 84, 23, 0.9);
+  border-radius: 10rpx;
+}
+.my-button{
+  padding: 0 !important;
+  width: 120rpx !important;
+  height: 40rpx;
+  font-size: 24rpx;
+  background-color: rgba(216, 84, 23, 0.9);
+  border-radius: 14rpx;
+  color: white;
+  outline: none;
+}
+.button-category{
+  z-index: 999;
+}
+/*实时天气*/
+.weather-img{
+  width: 80rpx;
+}
+.weather-now{
+  position: relative;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.weather-now .temp{
+  display: block;
+  padding-top: 20rpx;
+  width: 100%;
+  font-size: 200rpx;
+  font-weight: 200;
+  text-align: center;
+}
+.weather-now .currentCity{
+  display: block;
+  position: absolute;
+  top:0;
+  right: 50%;
+  font-size: 50rpx;
+  font-weight: bolder;
+  transform: translate(50%,0);
+}
+.weather-now .weather{
+  margin: 20rpx;
+}

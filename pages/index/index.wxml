@@ -1,0 +1,38 @@
+<!-- 实时天气 -->
+<view class="now-container">
+  <!-- 城市组件（可以获取用户位置以及用户位置的其他市区，以及用户所在位置或者所选市区的实时天气预报） -->
+  <now buttonText="{{currentCity}}" city="{{list}}" isShow="{{isShow}}" bindcustomevent="getCity" bindgetcity="getCurrentCity" weatherNow="{{weatherNow}}"></now>
+ </view>
+<!-- 24小时天气预报 -->
+<view class="forecast-container">
+  <!-- 标题 -->
+  <view class="weather-head">24小时天气预报</view>
+  <!-- 24小时天气预报组件 -->
+  <hours class="forecast"  scrollItemData="{{forecastHours}}"></hours>
+  <!-- 滚动视图 （canvas无法在scroll-view中实现滚动，将canvas保存成图片，放在scroll-view中）-->
+  <scroll-view scroll-x>
+    <view class="image-container">
+      <image class="canvas-image" mode="widthFix" src="{{canvasImagePath}}"></image>
+    </view>
+  </scroll-view>
+  <!-- 当天天气温度折线图 -->
+  <view class="canvas-container" >
+      <ec-canvas  class="canva" id="my-lineChart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
+<!-- 未来7天天气预报 -->
+<view class="forecast-container clearfix">
+  <!-- 标题 -->
+  <view class="weather-head">未来7天天气预报</view>
+  <!-- <daily class="forecast" scrollItemData="{{forecastDaily}}" lineXData="{{lineXData}}" lineYData="{{lineYData}}"></daily>  -->
+  <!-- 7天天气预报组件 -->
+  <daily class="forecast" scrollItemData="{{forecastDaily}}"></daily> 
+</view>
+
+<!-- 生活指数 -->
+<view class="life-container">
+  <!-- 标题 -->
+  <view class="life-head weather-head">生活指数</view>
+  <!-- 生活指数组件（获取用户当前城市以及用户所选城市的生活指数） -->
+  <life lifeData="{{lifeData}}" weatherNow="{{weatherNow}}" currentCity="{{currentCity}}"></life>
+</view>

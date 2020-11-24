@@ -1,0 +1,79 @@
+/* pages/detail/detail.wxss */
+.clearfix::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+image{
+  width: 40rpx;
+}
+.detail-container{
+  position: relative;
+  margin:0 auto;
+ 
+  height:100%;
+  color: white;
+  font-size: 26rpx;
+  text-indent: 20rpx;
+  /* background-color: darkgray; */
+  overflow: hidden;
+  /* box-shadow: salmon 20rpx 20rpx 15rpx; */
+  background-image: url("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3949259557,65301976&fm=26&gp=0.jpg");
+}
+.container{
+  position: relative;
+  margin-top:20rpx;
+}
+.content{
+  margin-top: 10rpx;
+  margin-bottom:10rpx
+}
+.container-h{
+  /* position: relative;
+  top: 10rpx; */
+  font-size: 30rpx;
+  font-weight: bolder;
+}
+.location{
+  position: relative;
+  top:10rpx;
+  left:10rpx;
+  width: 30rpx;
+}
+.city{
+  display: inline-block;
+  color: red;
+  font-weight: bolder;
+}
+.txt{
+  color: red;
+  font-weight: bolder;
+}
+text{
+  display: block;
+  margin-top: 15rpx;
+}
+/* 新闻资讯 */
+.news-container{
+  border-bottom: 1rpx dotted darkgrey;
+}
+.item{
+  float: left;
+}
+.news-l{
+  width: 30%;
+}
+.news-l image{
+  padding: 10rpx;
+  width: 200rpx;
+}
+.news-r{
+  width: 70%;
+}
+.news-r text{
+  font-size: 24rpx;
+}
+.news-time text{
+  font-size: 22rpx;
+  color: darkgrey;
+}

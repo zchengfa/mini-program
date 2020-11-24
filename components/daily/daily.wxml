@@ -1,0 +1,31 @@
+<view class="content">
+  <scroll-view class="scroll" hidden="{{showScrollView}}" scroll-x="{{scrollHorizontal}}" scroll-y="{{scrollVertial}}">
+    <!-- 遍历页面传给组件的数据 -->
+    <view class="scroll-item" wx:for="{{scrollItemData}}" wx:key="itemData">
+      <text class="time item-data">{{item.fxDate}}</text>
+      <view>
+        <text class="temp">{{item.tempMax}}℃~</text>
+        <text class="temp">{{item.tempMin}}℃</text>
+      </view> 
+      <text class="weather-text item-data">白天：{{item.textDay}}</text>
+      <view class="image-box">
+        <image style="{width:40rpx}" mode="widthFix" src="{{item.iconDay}}"></image>
+      </view>
+      <text class="weather-text item-data">晚上：{{item.textNight}}</text>
+      <view class="image-box">
+        <image style="{width:40rpx}" mode="widthFix" src="{{item.iconNight}}"></image>
+      </view>
+      <text class="humidity item-data">{{item.humidity}}</text>
+      <text class="pressure item-data">{{item.pressure}}</text>
+    </view>
+  </scroll-view>
+  <!-- <scroll-view class="scroll-views" scroll-x>
+    <view class="image-container">
+      <image class="canvas-image" mode="widthFix" src="{{canvasImagePath}}"></image>
+    </view>
+  </scroll-view>
+  <view class="canvas-container" >
+      <ec-canvas  class="canva" id="lineChart" canvas-id="chart-line" ec="{{ ecLine }}"></ec-canvas>
+      <view wx:for="{{lineXData}}" wx:key="item">{{item}}</view>
+  </view> -->
+</view>
