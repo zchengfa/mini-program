@@ -60,7 +60,7 @@
 ###### <u>[来自微信小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html)</u>
   +`注意`:承载网页的容器。会自动铺满整个小程序页面，<u>`个人类型的小程序暂不支持使用`</u>。
   
-  +`解决方式`: 1.您申请的小程序不是个人类型以及海外类型的小程序。
+  +`解决方式`: 1.申请的小程序不是个人类型以及海外类型的小程序。
   
   + 2.进入<u>[小程序后台](https://mp.weixin.qq.com/)</u>页面，设置-开发者设置-业务域名中将要跳转的域名添加进去。
    ![设置业务域名](https://img.jbzj.com/file_images/article/201909/2019092014082643.png)
